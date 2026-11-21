@@ -1,0 +1,199 @@
+{
+  "model_name": "RandomForest (baseline)",
+  "test_metrics": {
+    "accuracy": 0.865,
+    "precision": 0.8227,
+    "recall": 0.5556,
+    "f1": 0.6633,
+    "roc_auc": 0.9169
+  },
+  "top5_features": [
+    {
+      "feature": "capital_gain",
+      "importance": 0.05455
+    },
+    {
+      "feature": "marital_status",
+      "importance": 0.04127
+    },
+    {
+      "feature": "age",
+      "importance": 0.02647
+    },
+    {
+      "feature": "education_num",
+      "importance": 0.02542
+    },
+    {
+      "feature": "relationship",
+      "importance": 0.01323
+    }
+  ],
+  "comparison": [
+    {
+      "model": "LogReg (baseline)",
+      "accuracy": 0.8606,
+      "precision": 0.7593,
+      "recall": 0.6112,
+      "f1": 0.6773,
+      "roc_auc": 0.9112,
+      "cv_roc_auc": 0.9121,
+      "train_time_s": 2.4248,
+      "infer_ms_per_1k": 15.5666,
+      "model_size_mb": 0.0061
+    },
+    {
+      "model": "RandomForest (baseline)",
+      "accuracy": 0.865,
+      "precision": 0.8227,
+      "recall": 0.5556,
+      "f1": 0.6633,
+      "roc_auc": 0.9169,
+      "cv_roc_auc": 0.9165,
+      "train_time_s": 8.5446,
+      "infer_ms_per_1k": 46.647,
+      "model_size_mb": 17.297
+    },
+    {
+      "model": "TPOT AutoML (linear-light)",
+      "accuracy": 0.7385,
+      "precision": 0.4737,
+      "recall": 0.8375,
+      "f1": 0.6052,
+      "roc_auc": 0.8584,
+      "cv_roc_auc": 0.8645,
+      "train_time_s": 1840.1095,
+      "infer_ms_per_1k": 16.1396,
+      "model_size_mb": 0.0131
+    }
+  ],
+  "schema": {
+    "categorical": {
+      "workclass": [
+        "Federal-gov",
+        "Local-gov",
+        "Never-worked",
+        "Private",
+        "Self-emp-inc",
+        "Self-emp-not-inc",
+        "State-gov",
+        "Without-pay"
+      ],
+      "marital_status": [
+        "Divorced",
+        "Married-AF-spouse",
+        "Married-civ-spouse",
+        "Married-spouse-absent",
+        "Never-married",
+        "Separated",
+        "Widowed"
+      ],
+      "occupation": [
+        "Adm-clerical",
+        "Armed-Forces",
+        "Craft-repair",
+        "Exec-managerial",
+        "Farming-fishing",
+        "Handlers-cleaners",
+        "Machine-op-inspct",
+        "Other-service",
+        "Priv-house-serv",
+        "Prof-specialty",
+        "Protective-serv",
+        "Sales",
+        "Tech-support",
+        "Transport-moving"
+      ],
+      "relationship": [
+        "Husband",
+        "Not-in-family",
+        "Other-relative",
+        "Own-child",
+        "Unmarried",
+        "Wife"
+      ],
+      "race": [
+        "Amer-Indian-Eskimo",
+        "Asian-Pac-Islander",
+        "Black",
+        "Other",
+        "White"
+      ],
+      "sex": [
+        "Female",
+        "Male"
+      ],
+      "native_country": [
+        "Cambodia",
+        "Canada",
+        "China",
+        "Columbia",
+        "Cuba",
+        "Dominican-Republic",
+        "Ecuador",
+        "El-Salvador",
+        "England",
+        "France",
+        "Germany",
+        "Greece",
+        "Guatemala",
+        "Haiti",
+        "Holand-Netherlands",
+        "Honduras",
+        "Hong",
+        "Hungary",
+        "India",
+        "Iran",
+        "Ireland",
+        "Italy",
+        "Jamaica",
+        "Japan",
+        "Laos",
+        "Mexico",
+        "Nicaragua",
+        "Outlying-US(Guam-USVI-etc)",
+        "Peru",
+        "Philippines",
+        "Poland",
+        "Portugal",
+        "Puerto-Rico",
+        "Scotland",
+        "South",
+        "Taiwan",
+        "Thailand",
+        "Trinadad&Tobago",
+        "United-States",
+        "Vietnam",
+        "Yugoslavia"
+      ]
+    },
+    "numeric": {
+      "age": {
+        "min": 17.0,
+        "max": 90.0,
+        "median": 37.0
+      },
+      "education_num": {
+        "min": 1.0,
+        "max": 16.0,
+        "median": 10.0
+      },
+      "capital_gain": {
+        "min": 0.0,
+        "max": 99999.0,
+        "median": 0.0
+      },
+      "capital_loss": {
+        "min": 0.0,
+        "max": 4356.0,
+        "median": 0.0
+      },
+      "hours_per_week": {
+        "min": 1.0,
+        "max": 99.0,
+        "median": 40.0
+      }
+    }
+  },
+  "sklearn_version": "1.6.1"
+}
